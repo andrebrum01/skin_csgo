@@ -10,18 +10,21 @@
   <style>
     *{
       box-sizing: content-box;
+      margin:0px;
+      overflow: auto;
     }
     body,html{
       padding: 0px;
-      margin:0px;
-      width: 100vw;
+      margin: 0px;
+      max-width: 100%;
       min-height: 100vh;
       box-sizing: content-box;
-      overflow-x: hidden;
+      overflow: auto;
+
       color: #c5c5c5;
     }
     section{
-      width: 100vw;
+      width: 100%;
       min-height: 100vh;
       margin:0px;
       padding: 0px;
@@ -43,13 +46,15 @@
     }
     div.title{
       font-family: "Quantico";
-      font-size: 40px;
+      padding: 10px;
+      text-align: center;
+      font-size: 2em;
       color:white;
       text-shadow:0px 0px 10px rgba(15,15,15,.7);
     }
 
     .grid{
-      width: 100vw;
+      width: 100%;
       display:grid;
       grid-template-columns: repeat(3,1fr);
       padding:10px;
@@ -57,7 +62,7 @@
 
     .topshadow{
       background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(11, 11, 11, 0.6)), color-stop(40%, rgba(166, 166, 166, 0.4)), color-stop(100%, rgba(222, 222, 222, 0.1)));
-      width: 100%;
+      width: 100vw;
       height: 40px;
       z-index: 0;
     }
@@ -111,7 +116,12 @@
       padding:10px 0px;
     }
 
-
+    @media only screen and (max-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(1,1fr);
+        padding: 0px;
+      }
+    }
   </style>
 
 
